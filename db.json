@@ -1,0 +1,39 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "content": "HTML is easy",
+      "important": false
+    },
+    {
+      "id": "2",
+      "content": "Browser can execute only JavaScript",
+      "important": false
+    },
+    {
+      "id": "3",
+      "content": "GET and POST are the most important methods of HTTP protocol",
+      "important": false
+    },
+    {
+      "id": "ecb9",
+      "content": "Learning React",
+      "important": true
+    },
+    {
+      "id": "b402",
+      "content": "Learn ReactJS",
+      "important": false
+    },
+    {
+      "id": "e949",
+      "content": "Promises chaining",
+      "important": true
+    },
+    {
+      "id": "8e59",
+      "content": "Add styles in a react app",
+      "important": true
+    }
+  ]
+}
