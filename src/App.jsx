@@ -10,7 +10,7 @@ const App = () => {
   const [persons, setPersons] = useState([]) 
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
-  const [filteredPersons, setFilteredPersons] = useState(persons);
+  const [filteredPersons, setFilteredPersons] = useState([]);
   const [filter, setFilter] = useState('')
   const [notification, setNotification ] = useState("Message testing...")
 
@@ -18,13 +18,13 @@ const App = () => {
     contactService
       .getAll()
       .then(initialContacts => {
-        setPersons(initialContacts)
+        setPersons(Array.isArray(initialContacts) ? initialContacts : []);
       })
   }, [])
 
   useEffect(() => {
     setFilteredPersons(
-      persons.filter(person =>
+      persons.filter(person => 
         person.name.toLowerCase().includes(filter.toLowerCase()) ||
         person.number.includes(filter)
       )
