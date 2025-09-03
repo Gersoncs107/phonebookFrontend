@@ -86,7 +86,7 @@ const App = () => {
       setPersons(persons.concat(returnedContact))
     })
     .catch(error => {
-      showNotification(`<h2>Person validation failed: ${error.response.data.error}</h2>`)
+      showNotification(`Person validation failed: ${error.response.data.error}`)
     })
     showNotification(`Added ${contactObject.name}`)
    
