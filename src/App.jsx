@@ -54,6 +54,7 @@ const App = () => {
       alert('Name and number cannot be empty');
       return;
     }
+    
 
     const contactObject = {
       name: newName,
@@ -83,6 +84,9 @@ const App = () => {
     contactService.create(contactObject)
     .then((returnedContact) => {
       setPersons(persons.concat(returnedContact))
+    })
+    .catch(error => {
+      showNotification(`<h2>Person validation failed: ${error.response.data.error}</h2>`)
     })
     showNotification(`Added ${contactObject.name}`)
    
