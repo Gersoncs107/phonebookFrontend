@@ -13,7 +13,7 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('')
   const [filteredPersons, setFilteredPersons] = useState([]);
   const [filter, setFilter] = useState('')
-  const [notification, setNotification ] = useState("Message testing...")
+  const [notification, setNotification ] = useState(null)
 
   useEffect(() => {
     contactService
