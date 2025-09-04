@@ -103,6 +103,7 @@ const App = () => {
       contactService.deleteData(id)
         .then(() => {
           setPersons(persons.filter(person => person.id !== id));
+          showNotification(`Deleted ${name}`)
         })
         .catch(error => {
           showNotification(`Information of ${name} has already been removed from server`)
