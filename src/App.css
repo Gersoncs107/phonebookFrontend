@@ -1,41 +1,46 @@
 #root {
-  max-width: 1280px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   text-align: left;
+  background: #f9f9fb;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 5em;
+  padding: 1em;
+  transition: filter 300ms, transform 200ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.05);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .error {
-  color: red;
-  background: lightgrey;
-  font-size: 20px;
-  border-style: solid;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  color: #d32f2f;
+  background: #fff6f6;
+  font-size: 18px;
+  border: 1px solid #f8bbbc;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(211,47,47,0.07);
 }
 
-.notification{
-  color: red;
-  background: lightgrey;
-  font-size: 20px;
-  border-style: solid;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+.notification {
+  color: #1976d2;
+  background: #e3f2fd;
+  font-size: 18px;
+  border: 1px solid #90caf9;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(25,118,210,0.07);
 }
 
 @keyframes logo-spin {
@@ -55,8 +60,36 @@
 
 .card {
   padding: 2em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  margin-bottom: 18px;
 }
 
 .read-the-docs {
   color: #888;
+  font-size: 15px;
+  margin-top: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.read-the-docs:hover {
+  color: #646cff;
+}
+
+.read-the-docs::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: linear-gradient(90deg, transparent, #646cff, transparent);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.read-the-docs:hover::after {
+  transform: scaleX(1);
 }
